@@ -9,7 +9,7 @@ container:
   port: 8000
   containerEnvVars:
   - name: REDIS_URL
-    value: "redis://redis:6379"
+    value: "redis://redis"
   - name:  DATABASE_URL
     valueFrom:
       secretKeyRef:
