@@ -5,11 +5,11 @@ container:
   image:
     repository: "nguyentankdb17/microserviceapp_user_service"
     tag: 1.0.0
-  imagePullPolicy: IfNotPresent
+  imagePullPolicy: Always
   port: 8000
   containerEnvVars:
   - name: REDIS_URL
-    value: "redis://redis"
+    value: "redis://redis:6379"
   - name:  DATABASE_URL
     valueFrom:
       secretKeyRef:
