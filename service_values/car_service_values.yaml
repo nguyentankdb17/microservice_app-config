@@ -1,0 +1,17 @@
+appName: car-service
+replicaCount: 2
+
+container:
+  image:
+    repository: "nguyentankdb17/microserviceapp_car_service"
+    tag: 1.0.0
+  imagePullPolicy: IfNotPresent
+  port: 8000
+  containerEnvVars:
+  - name: USER_SERVICE_URL
+    value: "http://user-service:8000"
+  - name:  DATABASE_URL
+    valueFrom:
+      secretKeyRef:
+        name: db-secret
+        key: DATABASE_URL

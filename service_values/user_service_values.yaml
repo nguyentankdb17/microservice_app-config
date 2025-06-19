@@ -1,0 +1,22 @@
+appName: user-service
+replicaCount: 2
+
+container:
+  image:
+    repository: "nguyentankdb17/microserviceapp_user_service"
+    tag: 1.0.0
+  imagePullPolicy: IfNotPresent
+  port: 8000
+  containerEnvVars:
+  - name: REDIS_URL
+    value: "http://redis"
+  - name:  DATABASE_URL
+    valueFrom:
+      secretKeyRef:
+        name: db-secret
+        key: DATABASE_URL
+  - name: SECRET_KEY
+    valueFrom:
+      secretKeyRef:
+        name: jwt-secret
+        key: SECRET_KEY

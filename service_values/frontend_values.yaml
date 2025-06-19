@@ -1,0 +1,13 @@
+appName: frontend
+replicaCount: 2
+
+container:
+  image:
+    repository: "nguyentankdb17/microserviceapp_frontend"
+    tag: 1.0.0
+  port: 80
+  containerEnvVars:
+  - name: VITE_CAR_SERVICE
+    value: "http://car-service:8000"
+  - name: VITE_USER_SERVICE
+    value: "http://user-service:8000"
