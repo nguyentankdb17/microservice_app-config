@@ -8,8 +8,6 @@ container:
   imagePullPolicy: IfNotPresent
   port: 8000
   containerEnvVars:
-  - name: REDIS_URL
-    value: "http://redis"
   - name:  DATABASE_URL
     valueFrom:
       secretKeyRef:
