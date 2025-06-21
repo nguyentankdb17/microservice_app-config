@@ -4,7 +4,7 @@ replicaCount: 2
 container:
   image:
     repository: "nguyentankdb17/microserviceapp_car_service"
-    tag: "c1f99afc"
+    tag: "0c98a34f"
   imagePullPolicy: IfNotPresent
   port: 8000
   containerEnvVars:
