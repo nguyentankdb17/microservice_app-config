@@ -4,7 +4,7 @@ replicaCount: 1
 container:
   image:
     repository: "nguyentankdb17/microserviceapp_frontend"
-    tag: "5ebec1ff"
+    tag: "13a3e5ff"
   port: 80
   imagePullPolicy: IfNotPresent
 
